@@ -1,7 +1,7 @@
 [project]
 name = "maxlog"
 version = "0.0.1"
-description = "Loguru logging for personal projects"
+description = "Provides the Log class is a custom logger implementation using the loguru library. It provides a flexible and customizable logging solution for projects."
 authors = [
     {name = "Max Ludden", email = "dev@maxludden.com"},
 ]
