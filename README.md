@@ -11,20 +11,24 @@ pip install maxlog
 
 ```python
 # Create an instance of the Log class
-log = Log(rich_level="INFO", project_dir="/path/to/project")
+_console = Console(record=True)
+    log = Log("TRACE", console=_console)
 
-# Log messages at different levels
-log.info("This is an informational message")
-log.warning("This is a warning message")
-log.error("This is an error message")
+    # Test log instance
+    log.trace("This is a trace message.")
+    log.debug("This is a debug message.")
+    log.info("This is an info message.")
+    log.success("This is a success message.")
+    log.warning("This is a warning message.")
+    log.error("This is an error message.")
+    log.critical("This is a critical message.")
 
-# Change the rich level to log only messages with level DEBUG and above
-log.rich_level = "DEBUG"
+    log.console.save_svg("log.svg")
 
-# Log a message with level DEBUG
-log.debug("This is a debug message")
 ```
 ## Output
+
+![maxlog output](img/log.svg)
 
 ## Created by Max Ludden
 
