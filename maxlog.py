@@ -1,8 +1,6 @@
 from __future__ import annotations
 
 import atexit
-
-# ruff: noqa: F401
 import json
 from os import environ, getenv
 from pathlib import Path
@@ -19,7 +17,6 @@ from rich.table import Table
 from rich.text import Text
 from rich.pretty import Pretty
 from rich.traceback import install as install_rich_traceback
-from maxgradient import Gradient, GradientRule
 
 load_dotenv()
 
@@ -595,8 +592,7 @@ Line {line: ^5} | {level: ^8} ﰲ  {message}"""
         self.logger.disable(*args, **kwargs)
 
 
-log = Log()
-atexit.register(log._increment_run)
+atexit.register(Log()._increment_run)
 
 if __name__ == "__main__":  # pragma: no cover
     log = Log("TRACE")

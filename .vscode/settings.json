@@ -208,9 +208,9 @@
     "python.testing.unittestArgs": [
         "-v",
         "-s",
-        ".",
+        "./tests",
         "-p",
-        "test_*.py"
+        "*test*.py"
     ],
     "python.testing.unittestEnabled": true,
     "svg.preview.background": "editor",
